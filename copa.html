@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+<!-- include ar.js for A-Frame -->
+<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+
+<!-- to load .ply model -->
+<script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script>
+
+<body style='margin : 0px; overflow: hidden; font-family: Monospace;'><div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+  </div>
+	<!-- <a-scene embedded arjs='sourceType: video; sourceUrl:../../data/videos/headtracking.mp4;'> -->
+	<a-scene embedded arjs='sourceType: webcam'>
+	
+        <!-- <a-scene embedded arjs='sourceType: webcam; sourceWidth: 240; sourceHeight: 180;'> -->		
+	<!-- <a-scene arjs='sourceType: image; sourceUrl:../../data/images/screenshot.png'> -->
+	<!-- <a-scene embedded arjs='sourceType: image; sourceUrl:../../data/images/armchair.jpg;'> -->
+
+		<a-assets>
+			<!--<a-asset-item id='tree-obj' src='pokeball.obj'></a-asset-item>
+			<a-asset-item id='tree-mtl' src='pokeball.mtl'></a-asset-item>-->
+            <!--<a-asset-item id='tree-obj' src='Logo3.obj'></a-asset-item>-->
+            <a-asset-item id='tree-obj' src='mdl/comboloco.obj'></a-asset-item>
+  			<a-asset-item id='tree-mtl' src='mdl/comboloco.mtl'></a-asset-item>
+
+		</a-assets>		
+
+		<!-- <a-marker type='unknown'> -->
+        <!--<a-entity obj-model='obj: #tree-obj; mtl: #tree-mtl' position='0 0.8 0' rotation='0 90 0' shadow='receive: true'></a-entity>-->
+        <!--<a-entity obj-model='obj: #tree-obj; mtl: #tree-mtl' position='0 0 0' rotation='-90 0 0' scale='0.002 0.002 0.002'></a-entity>-->
+        <!--<a-entity obj-model='obj: #tree-obj;' position='0 0 0' rotation='-90 0 0' scale='0.00002 0.00002 0.00002'></a-entity>-->
+        <a-entity obj-model='obj: #tree-obj; mtl: #tree-mtl' position='0 0 0' rotation='-90 0 0' scale='0.00008 0.00008 0.00008'></a-entity>
+
+		<a-marker-camera preset='hiro'></a-marker-camera>
+	</a-scene>
+</body>
+</html>
